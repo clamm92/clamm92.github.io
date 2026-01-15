@@ -5,14 +5,14 @@ const experienceData = [
     role: "Coding Instructor",
     company: "Coding with Kids",
     location: "Portland, OR",
-    dates: "May 2025 – September 2025",
+    dates: "May 2025 - September 2025",
 
     overview:
-      "I taught weekly coding camps and classes to students ages 5–18, primarily working with middle and high school students learning programming fundamentals and applied software development. Over the course of the summer, I instructed 120+ students across 12 weeks, leading both beginner and advanced cohorts.",
+      "I taught weekly coding camps and classes to students ages 5-18, primarily working with middle and high school students learning programming fundamentals and applied software development. Over the course of the summer, I instructed 120+ students across 12 weeks, leading both beginner and advanced cohorts.",
 
     responsibilities: [
       "Designed and taught lessons covering Python, Java, HTML/CSS/JavaScript, TCP/IP fundamentals, APIs, object-oriented programming, Scratch, and robotics",
-      "Led Monday–Friday coding camps (6 hours/day) requiring sustained engagement, adaptability, and energy",
+      "Led Monday-Friday coding camps (6 hours/day) requiring sustained engagement, adaptability, and energy",
       "Guided advanced students through collaborative team projects using Replit and VS Code to build games and web applications",
       "Facilitated individual Scratch and robotics projects for younger students, adapting instruction to diverse learning styles"
     ],
@@ -28,7 +28,7 @@ const experienceData = [
     role: "Front-End Employee",
     company: "Fred Meyer",
     location: "Vancouver, WA",
-    dates: "September 2021 – May 2023",
+    dates: "September 2021 - May 2023",
 
     overview:
       "Worked in a fast-paced retail environment supporting 1,000+ customers daily. While operational in nature, the role required composure under pressure, clear communication, and strong teamwork.",
@@ -40,20 +40,24 @@ const experienceData = [
     ],
 
     leadership:
-      "Regularly worked 20–25 hours per week while balancing school and often took on extra shifts when short-staffed. As a parcel/cart attendant, navigated busy parking lots safely while keeping store entryways organized and stocked.",
+      "Regularly worked 20-25 hours per week while balancing school and often took on extra shifts when short-staffed. As a parcel/cart attendant, navigated busy parking lots safely while keeping store entryways organized and stocked.",
 
     impact:
-      "This role strengthened my reliability, work ethic, and ability to stay calm and effective in high-pressure environments—skills that translate directly to collaborative engineering teams."
+      "This role strengthened my reliability, work ethic, and ability to stay calm and effective in high-pressure environments, skills that translate directly to collaborative engineering teams."
   }
 ];
 
 function Experience() {
   return (
-    <section className="experience-section">
-      {experienceData.map((experience, index) => (
-        <ExperienceCard key={index} {...experience} />
-      ))}
-    </section>
+    <>
+        <h1 className="fw-bold mb-4 text-center">Experience</h1>
+        <section className="experience-section">
+        {experienceData.map((experience, index) => (
+            <ExperienceCard key={index} {...experience} />
+        ))}
+        </section>
+    </>
+    
   );
 }
 

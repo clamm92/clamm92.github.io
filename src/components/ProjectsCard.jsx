@@ -3,8 +3,7 @@ function ProjectsCard({
   tagline,
   problem,
   solution,
-  technologies,
-  links
+  technologies
 }) {
   return (
     <div className="card mb-4 shadow-sm border-0">
@@ -24,17 +23,6 @@ function ProjectsCard({
             <li key={index} className="mb-1">• {tech}</li>
           ))}
         </ul>
-
-        {links && (
-          <>
-            <h6 className="fw-bold mt-3">Links</h6>
-            <p className="mb-0">
-              <a href={links} className="text-primary" target="_blank" rel="noopener noreferrer">
-                {links}
-              </a>
-            </p>
-          </>
-        )}
       </div>
     </div>
   );
