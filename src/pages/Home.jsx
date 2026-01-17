@@ -51,8 +51,16 @@ function Home() {
             meaningful projects and gaining real-world experience through internships. Long term, I want
             to continue developing scalable, thoughtful solutions that have tangible impact.
         </p>
-        <p>
-            Check out my resume and links below!
+        <p> 
+            Check out my {" "}
+            <a
+                href="https://drive.google.com/file/d/1L0uaP0Mxw8Ap8_FTUJPqF1rAN-yK7SQm/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                resume
+            </a> {" "}
+            and links below!
         </p>
     </>
   );
