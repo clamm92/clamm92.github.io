@@ -22,7 +22,7 @@ const experienceData = [
       "Worked closely with parents by writing detailed student reports, communicating progress, addressing individual learning needs, and troubleshooting challenges such as WiFi failures or offline instruction. Created backup lesson plans and offline activities to ensure consistent learning under constraints.",
 
     impact:
-      "Maintained a 4.8/5 instructor rating while helping students grow from writing their first lines of code to confidently presenting final projects. Developed strong leadership, communication, and technical teaching skills while reinforcing my passion for making learning accessible and engaging."
+      "Maintained a 4.8/5.0 instructor rating while helping students grow from writing their first lines of code to confidently presenting final projects. Developed strong leadership, communication, and technical teaching skills while reinforcing my passion for making learning accessible and engaging."
   },
 
   {

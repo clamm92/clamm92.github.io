@@ -7,7 +7,7 @@ const projectsData = [
     problem:
       "Manual scheduling often leads to double bookings, inefficiencies, and poor customer experience for small service-based businesses.",
     solution:
-      "I built a client-requested full-stack booking platform for the local business Happy Nails, enabling technicians to manage services, availability, and customer appointments in real time. The Spring Boot backend handles 6 unique entities, complex scheduling logic, and provides strong database integrity, while the responsive React frontend provides a smooth booking experience. Our client reported that the system reduced manual scheduling effort by approximately 70%, allowing technicians to focus more on service quality and customer satisfaction.",
+      "Built a client-requested full-stack booking platform for the local business Happy Nails, enabling technicians to manage services, availability, and customer appointments in real time. The Spring Boot backend handles 6 unique entities, complex scheduling logic, and provides strong database integrity, while the responsive React frontend provides a smooth booking experience. Our client reported that the system reduced manual scheduling effort by approximately 70%, allowing technicians to focus more on service quality and customer satisfaction.",
     technologies: [
       "React",
       "TypeScript",
@@ -18,6 +18,42 @@ const projectsData = [
       "Gradle",
       "Postman",
       "Git"
+    ]
+  },
+
+  {
+    "title": "Viola: Advanced K-in-a-Row Game-Playing Agent",
+    "tagline": "An intelligent game-playing agent that combines adversarial search with LLM-powered conversational features for strategic board games.",
+    "problem": "Competitive game-playing agents must balance search efficiency with strategic depth. Naive minimax approaches scale poorly in large search spaces, and adding meaningful, context-aware agent interactions increases system complexity.",
+    "solution": "Built Viola, a high-performance K-in-a-Row game-playing agent using minimax with alpha-beta pruning, Zobrist hashing for transposition table caching, and move ordering optimization. Reduced move computation time from over 24 seconds to 0.1 seconds in 5-in-a-Row games through intelligent caching. Integrated the Google Gemini API to generate persona-driven, musical-themed dialogue that explains strategic decisions and summarizes gameplay, combining strong algorithmic performance with engaging interaction.",
+    "technologies": [
+      "Python",
+      "Minimax Algorithm",
+      "Alpha-Beta Pruning",
+      "Zobrist Hashing",
+      "Google Gemini API",
+      "Adversarial Search",
+      "Transposition Tables"
+    ]
+  },
+
+  {
+    title: "Zero-Touch Commute Assistant (DubHacks 2025)",
+    tagline: "A serverless web app that automatically adds commute-based reminders to users' calendars.",
+    problem:
+      "Manually planning departure times is error-prone and inefficient, especially when transit delays and real-time conditions are involved.",
+    solution:
+      "Built during a 24-hour hackathon, this project automatically determines optimal departure times and adds reminders directly to users' calendars. The system leverages real-time transit data and event-driven cloud services to improve reminder accuracy and planning efficiency.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "AWS Lambda",
+      "EventBridge",
+      "DynamoDB",
+      "Bedrock",
+      "OneBusAway API",
+      "Google Calendar API"
     ]
   },
 
@@ -39,26 +75,6 @@ const projectsData = [
       "ESLint",
       "Node.js",
       "date-fns"
-    ]
-  },
-
-  {
-    title: "Zero-Touch Commute Assistant (DubHacks 2025)",
-    tagline: "A serverless web app that automatically adds commute-based reminders to users' calendars.",
-    problem:
-      "Manually planning departure times is error-prone and inefficient, especially when transit delays and real-time conditions are involved.",
-    solution:
-      "Built during a 24-hour hackathon, this project automatically determines optimal departure times and adds reminders directly to users' calendars. The system leverages real-time transit data and event-driven cloud services to improve reminder accuracy and planning efficiency.",
-    technologies: [
-      "React",
-      "Node.js",
-      "Express",
-      "AWS Lambda",
-      "EventBridge",
-      "DynamoDB",
-      "Bedrock",
-      "OneBusAway API",
-      "Google Calendar API"
     ]
   },
 
@@ -115,7 +131,7 @@ const projectsData = [
   },
 
   {
-    title: "Seattle Homeless Community Platform",
+    title: "Seattle Homeless Community Platform (WINFO 2025)",
     tagline: "A community-driven platform connecting the homeless population with critical resources.",
     problem:
       "Seattle lacks centralized digital spaces for storytelling, awareness, and resource sharing.",
