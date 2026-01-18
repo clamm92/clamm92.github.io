@@ -4,7 +4,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Hobbies from './pages/Hobbies';
 import Footer from './components/Footer';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
