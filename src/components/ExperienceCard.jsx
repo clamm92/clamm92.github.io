@@ -7,7 +7,8 @@ function ExperienceCard({
   overview,
   responsibilities,
   leadership,
-  impact
+  impact, 
+  images
 }) {
   return (
     <div className="card mb-4 shadow-sm border">
@@ -23,7 +24,23 @@ function ExperienceCard({
           </a>{" "}
           · {location} · {dates}
         </p>
-
+        {images && (
+          <div className="d-flex gap-3 my-3">
+            {images.map((src, index) => (
+              <div
+                key={index}
+                className="border rounded bg-light overflow-hidden d-flex align-items-center justify-content-center"
+                style={{ width: "120px", height: "120px" }}
+              >
+                <img
+                  src={src}
+                  alt={`${company} experience ${index + 1}`} // improve alt text 
+                  className="w-100 h-100 object-fit-cover"
+                />
+              </div>
+            ))}
+          </div>
+        )}
         <h6 className="fw-bold">Role Overview</h6>
         <p>{overview}</p>
 

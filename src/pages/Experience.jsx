@@ -22,7 +22,11 @@ const experienceData = [
       "Worked closely with parents by writing detailed student reports, communicating progress, addressing individual learning needs, and troubleshooting challenges such as WiFi failures or offline instruction. Created backup lesson plans and offline activities to ensure consistent learning under constraints.",
 
     impact:
-      "Maintained a 4.8/5.0 instructor rating while helping students grow from writing their first lines of code to confidently presenting final projects. Developed strong leadership, communication, and technical teaching skills while reinforcing my passion for making learning accessible and engaging."
+      "Maintained a 4.8/5.0 instructor rating while helping students grow from writing their first lines of code to confidently presenting final projects. Developed strong leadership, communication, and technical teaching skills while reinforcing my passion for making learning accessible and engaging.",
+    images: [
+      "/cwk-logo.png",
+      "/robotics-cwk.jpg"
+    ]
   },
 
   {
@@ -45,7 +49,11 @@ const experienceData = [
       "Regularly worked 20-25 hours per week while balancing school and often took on extra shifts when short-staffed. As a parcel/cart attendant, navigated busy parking lots safely while keeping store entryways organized and stocked.",
 
     impact:
-      "This role strengthened my reliability, work ethic, and ability to stay calm and effective in high-pressure environments, skills that translate directly to collaborative engineering teams."
+      "This role strengthened my reliability, work ethic, and ability to stay calm and effective in high-pressure environments, skills that translate directly to collaborative engineering teams.",
+    images: [
+      "/fred-meyer.jpg",
+      "/fred-meyer-stands.jpg"
+    ]
   }
 ];
 
