@@ -22,6 +22,26 @@ const projectsData = [
   },
 
   {
+    title: "AwareAI: AI Environmental Impact Tracker (WINFO 2026)",
+    tagline:
+      "A privacy-first Chrome extension that estimates and visualizes the real-time water consumption of AI interactions across major platforms.",
+    problem:
+      "AI adoption is accelerating, yet most users remain unaware of its environmental footprint. Each prompt to systems like ChatGPT, Claude, or Gemini is processed in large-scale data centers that rely on water-intensive cooling, an invisible cost that compounds as AI usage grows globally.",
+    solution:
+      "Developed a Chrome extension that estimates water usage in real time using 2026 energy benchmarks from Google's Environmental Report and peer-reviewed academic research. During live demos, the extension processed over 1,000 prompts across six major platforms while keeping all user data local and aggregating only anonymous global totals via Firebase’s REST API. A floating widget visualizes both personal and collective impact using a six-tier scale (droplets → oceans), helping users contextualize consumption at a glance. Calculations run client-side in single-digit milliseconds and require no accounts or personally identifiable information.",
+    technologies: [
+      "JavaScript",
+      "Chrome Extensions API",
+      "Manifest V3",
+      "Firebase Firestore",
+      "REST APIs",
+      "Chrome Storage API",
+      "Content Scripts",
+      "Service Workers"
+    ]
+  },
+
+  {
     "title": "Viola: Advanced K-in-a-Row Game-Playing Agent",
     "tagline": "An intelligent game-playing agent that combines adversarial search with LLM-powered conversational features for strategic board games.",
     "problem": "Competitive game-playing agents must balance search efficiency with strategic depth. Naive minimax approaches scale poorly in large search spaces, and adding meaningful, context-aware agent interactions increases system complexity.",
