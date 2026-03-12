@@ -76,6 +76,34 @@ const projectsData = [
   },
 
   {
+    title: "Sex-Ed Center",
+    tagline: "A stigma-free sexual health education platform for U.S. high school students.",
+    problem:
+      "Without a standardized curriculum, U.S. adolescents are left to fill critical sexual health knowledge gaps with peer advice and social media misinformation, perpetuating stigma and poor health literacy.",
+    solution:
+      "Built a fully deployed, stigma-free web platform addressing UN SDG 4 (Quality Education) and SDG 3 (Good Health and Well-Being) that delivers accurate, age-appropriate sexual health content across 6 interactive learning modules. Features include a mastery-tracked quiz system with adaptive scoring, a filterable flashcard deck sourced from credible health references, daily reflection prompts with streak tracking, and a keyword-searchable glossary, all designed to replace misinformation with evidence-based education. Supports both anonymous and authenticated users via Google OAuth, ensuring zero barriers to access. Deployed to production on Firebase Hosting with secure Firestore rules isolating all user data.",
+    technologies: [
+      "React",
+      "Vite",
+      "Firebase Auth",
+      "Firebase Firestore",
+      "Firebase Hosting",
+      "Bootstrap",
+      "React Router",
+      "Vitest",
+      "ESLint"
+    ],
+    images: [
+      "/sex-ed-center-profile.png",
+      "/sex-ed-center-overview.png",
+      "/sex-ed-center-quiz.png"
+    ],
+    links: [
+      { label: "Website", url: "https://kitty-kats.web.app/", icon: "live" }
+    ]
+  },
+
+  {
     title: "EcoTrack",
     tagline: "A gamified waste reduction web app that helps users track, visualize, and improve their environmental impact.",
     problem:
