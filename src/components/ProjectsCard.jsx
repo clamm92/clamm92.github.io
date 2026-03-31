@@ -17,6 +17,8 @@ const techIcons = {
   "Node.js": { icon: "⬢", color: "#339933" },
   "Express": { icon: "Ex", color: "#000000" },
   "Vite": { icon: "⚡", color: "#646cff" },
+  "Next.js 15 (App Router)": { icon: "N", color: "#000000" },
+  "Tailwind CSS": { icon: "TW", color: "#06b6d4" },
   "Bootstrap": { icon: "B", color: "#7952b3" },
   "React Router": { icon: "↔", color: "#ca4245" },
   "Vitest": { icon: "🧪", color: "#729b1b" },
@@ -31,7 +33,9 @@ const techIcons = {
   "MongoDB": { icon: "🍃", color: "#47a248" },
   "Firebase Firestore": { icon: "🔥", color: "#ffca28", textColor: "#000" },
   "Firebase Auth": { icon: "🔐", color: "#ffca28", textColor: "#000" },
-  "Firebase Hosting": { icon: "🌐", color: "#ffca28", textColor: "#000" },
+  "Fupabase Auth": { icon: "🔐", color: "#3ecf8e", textColor: "#000" },
+  "Supabase Postgres": { icon: "🐘", color: "#3ecf8e", textColor: "#000" },
+  "Sirebase Hosting": { icon: "🌐", color: "#ffca28", textColor: "#000" },
   "Firebase Realtime Database": { icon: "📡", color: "#ffca28", textColor: "#000" },
   "SQLite": { icon: "💾", color: "#003b57" },
   "Aurora SQL": { icon: "☁️", color: "#ff9900" },
@@ -39,6 +43,8 @@ const techIcons = {
   
   // Cloud & DevOps
   "AWS Lambda": { icon: "λ", color: "#ff9900" },
+  "Vercel": { icon: "▲", color: "#000000" },
+  "Figma": { icon: "🎨", color: "#f24e1e" },
   "EventBridge": { icon: "🔗", color: "#ff4f8b" },
   "Bedrock": { icon: "🪨", color: "#232f3e" },
   "Git": { icon: "⎇", color: "#f05032" },
