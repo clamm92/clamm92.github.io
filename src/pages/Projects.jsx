@@ -2,6 +2,37 @@ import ProjectsCard from "../components/ProjectsCard"
 
 const projectsData = [
   {
+    title: "Sepsis Readmission Prevention (In Progress) - PeaceHealth Capstone",
+    tagline:
+      "A mobile-first clinical support app helping sepsis survivors and caregivers monitor recovery risk, recognize warning signs, and take timely action after discharge.",
+    problem:
+      "Sepsis survivors face a high-risk post-discharge window, but existing tools are fragmented and clinically dense. Patients and caregivers struggle to recognize warning signs early or know when to escalate, increasing avoidable readmissions.",
+    solution:
+      "Our goal was to build one accessible platform combining daily risk check-ins, symptom history, and education to support post-discharge monitoring for non-clinical users.\n\nAs a team, we defined the feature roadmap, designed navigation and question flow, and iterated with sponsor feedback to balance clinical relevance with simplicity. We validated assumptions through rapid prototyping and usability testing.\n\nI led the technical core with support from teammates: I primarily designed a multi-tier risk engine using vitals scoring, pattern detection, and clinical modifiers to provide real-time triage guidance with emergency escalation. I built an adaptive check-in flow with context-driven branching to reduce input burden, shipped 3 authenticated API routes for onboarding, check-ins, and reminders, engineered schema-safe API pipelines to reduce invalid writes, set up Supabase Auth and Postgres, and converted Figma designs into production UI. Our team also built a comprehensive automated test suite covering risk logic, API routes, and UI state transitions.\n\nKey takeaways: I learned to communicate faster under deadline pressure, pick up new tools quickly, and treat user testing as a core part of engineering rather than a final step.\n\nNext steps: complete the education module system, run usability studies, and strengthen security and compliance messaging.",
+    technologies: [
+      "Next.js 15 (App Router)",
+      "TypeScript",
+      "React",
+      "Supabase Auth",
+      "Supabase Postgres",
+      "Tailwind CSS",
+      "Vitest",
+      "Vercel",
+      "REST APIs",
+      "Figma"
+    ],
+    images: [
+      "/sepsis-readmission-home.png",
+      "/sepsis-readmission-space-screen.png",
+      "/sepsis-readmission-question.png",
+      "/sepsis-readmission-result.png"
+    ],
+    links: [
+      { label: "Video Demo", url: "https://youtube.com/watch?si=lhgdEpjlTz5XW-Xb&v=jsSByGFs7TU&feature=youtu.be", icon: "video" }
+    ]
+  },
+
+  {
     title: "Nail Salon Booking Platform (Client Project)",
     tagline: "A full-stack scheduling platform that modernizes appointment booking for nail salons.",
     problem:
