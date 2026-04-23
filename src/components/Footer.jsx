@@ -40,7 +40,7 @@ function Footer() {
               </div>
               <div className="col-12 col-md-4 text-md-end">
                 <p className="mb-0 text-muted small">
-                  Last updated: March 2026
+                  Last updated: April 2026
                 </p>
               </div>
 

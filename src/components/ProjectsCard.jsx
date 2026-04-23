@@ -83,6 +83,7 @@ function ProjectsCard({
   tagline,
   problem,
   solution,
+  impact,
   technologies,
   images,
   links
@@ -219,8 +220,13 @@ function ProjectsCard({
             </div>
 
             <div className="content-section">
-              <h6 className="section-title">Solution & Impact</h6>
+              <h6 className="section-title">Solution</h6>
               <p className="section-text">{solution}</p>
+            </div>
+
+            <div className="content-section">
+              <h6 className="section-title">Impact</h6>
+              <p className="section-text">{impact}</p>
             </div>
 
             <div className="content-section">
