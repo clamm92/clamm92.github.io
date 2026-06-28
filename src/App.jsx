@@ -13,18 +13,33 @@ function App() {
       <div className="d-flex flex-column min-vh-100">
         <Navbar />
         <main className="flex-grow-1">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-12 col-md-10 col-lg-8 mt-4">
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/experience" element={<Experience />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/hobbies" element={<Hobbies />} />
-                </Routes>
-              </div>
-            </div>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/experience"
+              element={
+                <div className="page-container">
+                  <Experience />
+                </div>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <div className="page-container">
+                  <Projects />
+                </div>
+              }
+            />
+            <Route
+              path="/hobbies"
+              element={
+                <div className="page-container">
+                  <Hobbies />
+                </div>
+              }
+            />
+          </Routes>
         </main>
         <Footer />
       </div>
