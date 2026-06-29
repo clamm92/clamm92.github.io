@@ -11,6 +11,21 @@ const navLinks = [
   { to: "/hobbies", label: "Hobbies" },
 ];
 
+function resolveHeaderState() {
+  if (typeof window === "undefined") return "visible";
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+  const onHome = window.location.pathname === "/";
+  const isSticky = window.scrollY >= STICKY_THRESHOLD;
+
+  if (!headerHasAnimated && onHome && !isSticky && isDesktop) {
+    headerHasAnimated = true;
+    return "animate";
+  }
+
+  headerHasAnimated = true;
+  return "visible";
+}
+
 function AppNavbar() {
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -18,14 +33,7 @@ function AppNavbar() {
     () => typeof window !== "undefined" && window.scrollY >= STICKY_THRESHOLD
   );
   const [menuOpen, setMenuOpen] = useState(false);
-  const [headerState, setHeaderState] = useState(() => {
-    if (typeof window === "undefined") return "visible";
-    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-    const onHome = window.location.pathname === "/";
-    const isSticky = window.scrollY >= STICKY_THRESHOLD;
-    if (!headerHasAnimated && onHome && !isSticky && isDesktop) return "animate";
-    return "visible";
-  });
+  const [headerState] = useState(resolveHeaderState);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY >= STICKY_THRESHOLD);
@@ -34,22 +42,7 @@ function AppNavbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    const isDesktop = window.matchMedia("(min-width: 768px)").matches;
-    const isSticky = window.scrollY >= STICKY_THRESHOLD;
-
-    if (!headerHasAnimated && isHome && !isSticky && isDesktop) {
-      headerHasAnimated = true;
-      setHeaderState("animate");
-    } else {
-      headerHasAnimated = true;
-      setHeaderState("visible");
-    }
-  }, [isHome]);
+  const closeMenu = () => setMenuOpen(false);
 
   const headerClasses = [
     "site-header",
@@ -63,7 +56,7 @@ function AppNavbar() {
   return (
     <header id="site-header" className={headerClasses}>
       <div className="site-header-inner layout-shell">
-        <Link to="/" className="site-logo">
+        <Link to="/" className="site-logo" onClick={closeMenu}>
           Connor Lam
         </Link>
 
@@ -89,6 +82,7 @@ function AppNavbar() {
               key={to}
               to={to}
               className={`site-nav-link ${location.pathname === to ? "active" : ""}`}
+              onClick={closeMenu}
             >
               {label}
             </Link>

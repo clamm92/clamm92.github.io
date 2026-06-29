@@ -1,3 +1,4 @@
+import PageHeader from "../components/PageHeader";
 import ExperienceCard from "../components/ExperienceCard";
 
 const experienceData = [
@@ -62,24 +63,25 @@ const experienceData = [
 function Experience() {
   return (
     <>
-        <h1 className="fw-bold mb-2 text-center">Experience</h1>
-        <p className="text-muted text-center mb-4" style={{ maxWidth: '600px', margin: '0 auto' }}>
-          Here's where I've worked and the skills I've developed along the way. Looking for more details?  
-          {" "}<a
-                href="https://drive.google.com/file/d/1L0uaP0Mxw8Ap8_FTUJPqF1rAN-yK7SQm/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View my resume.
-            </a> {" "}
-        </p>
-        <section className="experience-section">
-        {experienceData.map((experience, index) => (
-            <ExperienceCard key={index} {...experience} />
+      <PageHeader title="Experience">
+        Here's where I've worked and the skills I've developed along the way.
+        Looking for more details?{" "}
+        <a
+          href="https://drive.google.com/file/d/1L0uaP0Mxw8Ap8_FTUJPqF1rAN-yK7SQm/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View my resume
+        </a>
+        .
+      </PageHeader>
+
+      <section className="card-list" aria-label="Work experience">
+        {experienceData.map((experience) => (
+          <ExperienceCard key={`${experience.company}-${experience.dates}`} {...experience} />
         ))}
-        </section>
+      </section>
     </>
-    
   );
 }
 

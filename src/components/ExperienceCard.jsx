@@ -55,14 +55,14 @@ function ExperienceCard({
         <div className="card-header-section">
           <div className="card-header-content">
             <div className="card-title-row">
-              <h3 className="card-title fw-bold mb-0">{role}</h3>
+              <h3 className="card-title">{role}</h3>
               <span className={`expand-indicator ${isExpanded ? 'rotated' : ''}`}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M6 9l6 6 6-6"/>
                 </svg>
               </span>
             </div>
-            <p className="card-subtitle text-muted mb-2">
+            <p className="card-subtitle">
               <a href={link} target="_blank" rel="noopener noreferrer" className="company-link" onClick={(e) => e.stopPropagation()}>
                 {company}
               </a>
@@ -104,18 +104,17 @@ function ExperienceCard({
         <div className="card-expandable-content">
           <div className="card-expandable-inner">
             {images && (
-              <div className="d-flex gap-3 my-3 flex-wrap">
+              <div className="card-image-grid">
                 {images.map((src, index) => (
                   <div
-                    key={index}
-                    className="project-image-container border rounded bg-light overflow-hidden d-flex align-items-center justify-content-center"
-                    style={{ width: "100px", height: "100px", cursor: "pointer" }}
+                    key={src}
+                    className="card-image-thumb project-image-container"
                     onClick={(e) => { e.stopPropagation(); openModal(src); }}
                   >
                     <img
                       src={src}
                       alt={`${company} experience ${index + 1}`}
-                      className="w-100 h-100 object-fit-cover project-image"
+                      className="project-image"
                     />
                   </div>
                 ))}

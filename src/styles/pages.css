@@ -1,0 +1,63 @@
+.page-header {
+  margin-bottom: 2.5rem;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: var(--text-page-title);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+}
+
+.page-intro {
+  font-family: var(--font-mono);
+  font-size: var(--text-subtitle);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 38rem;
+  margin: 0;
+}
+
+.page-intro a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-intro a:hover {
+  color: var(--color-accent-hover);
+}
+
+.prose {
+  font-family: var(--font-display);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: var(--color-text);
+  max-width: 42rem;
+}
+
+.prose p {
+  margin: 0 0 1.25rem;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  color: var(--color-accent-hover);
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
