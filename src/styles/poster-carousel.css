@@ -1,0 +1,274 @@
+.poster-carousel-section {
+  background: var(--color-bg);
+  padding: 3rem 0 4rem;
+}
+
+.poster-carousel-header {
+  margin: 0 auto 2rem;
+}
+
+.poster-carousel-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-page-title);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+}
+
+.poster-carousel-intro {
+  font-family: var(--font-mono);
+  font-size: var(--text-subtitle);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 38rem;
+  margin: 0;
+}
+
+.poster-carousel-footer {
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+}
+
+.poster-carousel-more {
+  font-family: var(--font-display);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.poster-carousel-more:hover {
+  color: var(--color-accent-hover);
+}
+
+.poster-carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--layout-inset-x);
+  padding: 0.5rem var(--page-padding-x) 1rem;
+  padding-left: var(--layout-inset-x);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+.poster-carousel-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.poster-carousel-track::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+.poster-carousel-item {
+  flex: 0 0 auto;
+  width: min(280px, 75vw);
+  scroll-snap-align: start;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: calc(var(--stagger-index, 0) * 0.1s);
+}
+
+.poster-carousel-section.is-visible .poster-carousel-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.poster-card {
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  background: var(--poster-accent);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-card);
+}
+
+.poster-card:hover,
+.poster-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  outline: none;
+}
+
+.poster-card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.poster-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.poster-card-year {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.poster-card-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.poster-card-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.poster-card-thumb {
+  width: 35%;
+  max-height: 45%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.poster-card-text {
+  display: grid;
+  grid-template-rows: auto 0fr;
+  flex-shrink: 0;
+  min-height: 0;
+  overflow: hidden;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.poster-card:hover .poster-card-text,
+.poster-card:focus-visible .poster-card-text {
+  grid-template-rows: auto 1fr;
+}
+
+.poster-card-tagline-wrap {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.poster-card:hover .poster-card-tagline-wrap,
+.poster-card:focus-visible .poster-card-tagline-wrap {
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+.poster-card-tagline-wrap::-webkit-scrollbar {
+  width: 4px;
+}
+
+.poster-card-tagline-wrap::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+}
+
+.poster-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.5rem;
+}
+
+.poster-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.poster-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 0.85;
+}
+
+.poster-card-tagline {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+@media (min-width: 768px) {
+  .poster-card:hover .poster-card-tagline,
+  .poster-card:focus-visible .poster-card-tagline {
+    opacity: 0.85;
+  }
+}
+
+@media (max-width: 767px) {
+  .poster-card-text {
+    display: block;
+    max-height: 9.5rem;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+  }
+
+  .poster-card-tagline {
+    opacity: 0.85;
+  }
+
+  .poster-carousel-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .poster-carousel-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .poster-card,
+  .poster-card-text {
+    transition: none;
+  }
+
+  .poster-card:hover,
+  .poster-card:focus-visible {
+    transform: none;
+  }
+
+  .poster-card-text {
+    display: block;
+    overflow-y: auto;
+  }
+
+  .poster-card-tagline {
+    opacity: 0.85;
+  }
+}
