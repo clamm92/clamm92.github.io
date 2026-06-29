@@ -49,16 +49,20 @@ function PosterCard({ project, style }) {
         ) : null}
       </div>
 
-      <div className="poster-card-bottom">
-        <h3 className="poster-card-title">{project.shortTitle}</h3>
-        {tags.length > 0 && (
-          <div className="poster-card-tags">
-            {tags.map((tag) => (
-              <span key={tag} className="poster-card-tag">{tag}</span>
-            ))}
-          </div>
-        )}
-        <p className="poster-card-tagline">{project.tagline}</p>
+      <div className="poster-card-text">
+        <div className="poster-card-summary">
+          <h3 className="poster-card-title">{project.shortTitle}</h3>
+          {tags.length > 0 && (
+            <div className="poster-card-tags">
+              {tags.map((tag) => (
+                <span key={tag} className="poster-card-tag">{tag}</span>
+              ))}
+            </div>
+          )}
+        </div>
+        <div className="poster-card-tagline-wrap">
+          <p className="poster-card-tagline">{project.tagline}</p>
+        </div>
       </div>
     </article>
   );

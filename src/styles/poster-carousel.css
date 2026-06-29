@@ -146,14 +146,42 @@
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
 }
 
-.poster-card-bottom {
+.poster-card-text {
+  display: grid;
+  grid-template-rows: auto 0fr;
   flex-shrink: 0;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 0;
+  overflow: hidden;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.poster-card:hover .poster-card-bottom,
-.poster-card:focus-visible .poster-card-bottom {
-  transform: translateY(-0.5rem);
+.poster-card:hover .poster-card-text,
+.poster-card:focus-visible .poster-card-text {
+  grid-template-rows: auto 1fr;
+}
+
+.poster-card-tagline-wrap {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.poster-card:hover .poster-card-tagline-wrap,
+.poster-card:focus-visible .poster-card-tagline-wrap {
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+.poster-card-tagline-wrap::-webkit-scrollbar {
+  width: 4px;
+}
+
+.poster-card-tagline-wrap::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
 }
 
 .poster-card-title {
@@ -168,7 +196,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-  margin-bottom: 0.5rem;
 }
 
 .poster-card-tag {
@@ -184,54 +211,32 @@
   font-size: 0.8rem;
   line-height: 1.5;
   margin: 0;
-  max-height: 0;
+  padding-top: 0.5rem;
   opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, opacity 0.35s ease, margin 0.35s ease;
+  transition: opacity 0.35s ease;
 }
 
 @media (min-width: 768px) {
   .poster-card:hover .poster-card-tagline,
   .poster-card:focus-visible .poster-card-tagline {
-    max-height: 4.5rem;
     opacity: 0.85;
-    margin-top: 0.25rem;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
-  }
-
-  .poster-card-tagline::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .poster-card-tagline::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.35);
-    border-radius: 999px;
   }
 }
 
 @media (max-width: 767px) {
-  .poster-card-tagline {
-    max-height: 3.25rem;
-    opacity: 0.85;
-    margin-top: 0.25rem;
+  .poster-card-text {
+    display: block;
+    max-height: 9.5rem;
     overflow-y: auto;
     overscroll-behavior-y: contain;
+    touch-action: pan-y;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
   }
 
-  .poster-card-tagline::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .poster-card-tagline::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.35);
-    border-radius: 999px;
+  .poster-card-tagline {
+    opacity: 0.85;
   }
 
   .poster-carousel-item {
@@ -249,8 +254,7 @@
   }
 
   .poster-card,
-  .poster-card-bottom,
-  .poster-card-tagline {
+  .poster-card-text {
     transition: none;
   }
 
@@ -259,9 +263,12 @@
     transform: none;
   }
 
-  .poster-card-tagline {
-    max-height: 4.5rem;
-    opacity: 0.85;
+  .poster-card-text {
+    display: block;
     overflow-y: auto;
+  }
+
+  .poster-card-tagline {
+    opacity: 0.85;
   }
 }
