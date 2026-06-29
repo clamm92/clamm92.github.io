@@ -1,12 +1,15 @@
 import PageHeader from "../components/PageHeader";
+import ExternalLink from "../components/ExternalLink";
 import ExperienceTimeline from "../components/experience/ExperienceTimeline";
 import DetailPanel from "../components/detail/DetailPanel";
 import DetailContentComposer from "../components/detail/DetailContentComposer";
 import ExperienceDetailHeader from "../components/experience/ExperienceDetailHeader";
 import { getExperienceBySlug } from "../data/experience";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { useSlugSelection } from "../hooks/useSlugSelection";
 
 function Experience() {
+  useDocumentTitle("Experience | Connor Lam");
   const { slug: selectedSlug, select, clear } = useSlugSelection();
   const selectedEntry = selectedSlug ? getExperienceBySlug(selectedSlug) : null;
 
@@ -14,13 +17,9 @@ function Experience() {
     <>
       <PageHeader title="Experience">
         Education, internships, and work so far. Select an entry to read more, or{" "}
-        <a
-          href="https://drive.google.com/file/d/1L0uaP0Mxw8Ap8_FTUJPqF1rAN-yK7SQm/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <ExternalLink href="https://drive.google.com/file/d/1L0uaP0Mxw8Ap8_FTUJPqF1rAN-yK7SQm/view?usp=sharing">
           view my resume
-        </a>
+        </ExternalLink>
         .
       </PageHeader>
 

@@ -16,8 +16,6 @@
   gap: 0;
 }
 
-/* ——— Prose sections ——— */
-
 .hobby-section {
   padding: 2rem 0;
   border-top: 1px solid var(--color-border);
@@ -63,8 +61,6 @@
   color: var(--color-accent-hover);
 }
 
-/* ——— Gallery (mobile: horizontal strip) ——— */
-
 .hobby-gallery-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -85,9 +81,6 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 0.75rem;
-  margin: 0 calc(-1 * var(--page-padding-x));
-  padding-left: var(--page-padding-x);
-  padding-right: var(--page-padding-x);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;
@@ -154,8 +147,6 @@
   color: var(--color-text-muted);
   margin-top: 0.45rem;
 }
-
-/* ——— Gallery (desktop: sticky mosaic) ——— */
 
 @media (min-width: 960px) {
   .hobbies-layout {

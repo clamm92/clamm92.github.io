@@ -1,10 +1,12 @@
-import Hero from "../components/Hero";
+import HomeIntro from "../components/HomeIntro";
 import ProjectPosterCarousel from "../components/ProjectPosterCarousel";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 function Home() {
+  useDocumentTitle("Connor Lam");
   return (
     <>
-      <Hero />
+      <HomeIntro />
       <ProjectPosterCarousel />
     </>
   );

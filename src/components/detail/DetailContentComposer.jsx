@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ImageLightbox from "../ImageLightbox";
 import OverviewBlock from "./blocks/OverviewBlock";
 import BulletsBlock from "./blocks/BulletsBlock";
 import TextBlock from "./blocks/TextBlock";
@@ -57,18 +58,11 @@ function DetailContentComposer({ blocks = [] }) {
       </div>
 
       {modalImage && (
-        <div className="image-modal-overlay" onClick={() => setModalImage(null)}>
-          <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              className="image-modal-close"
-              onClick={() => setModalImage(null)}
-            >
-              ×
-            </button>
-            <img src={modalImage} alt="Enlarged view" className="image-modal-img" />
-          </div>
-        </div>
+        <ImageLightbox
+          src={modalImage.src}
+          alt={modalImage.alt}
+          onClose={() => setModalImage(null)}
+        />
       )}
     </>
   );

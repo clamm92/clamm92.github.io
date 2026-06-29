@@ -1,8 +1,9 @@
+import ExternalLink from "./ExternalLink";
 import "../styles/hero.css";
 
-function Hero() {
+function HomeIntro() {
   return (
-    <section className="hero hero-animate" data-hero>
+    <section className="hero hero-animate" data-hero aria-label="Introduction">
       <div className="hero-inner layout-shell">
         <div className="hero-profile">
           <img
@@ -18,21 +19,13 @@ function Hero() {
           Hey, I am Connor Lam.
           <br className="d-none d-sm-block" />
           {" "}An incoming fourth-year{" "}
-          <a
-            href="https://ischool.uw.edu/programs/informatics"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://ischool.uw.edu/programs/informatics">
             Informatics
-          </a>{" "}
+          </ExternalLink>{" "}
           student at the{" "}
-          <a
-            href="https://www.washington.edu/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://www.washington.edu/">
             University of Washington
-          </a>
+          </ExternalLink>
           , seeking full-time software roles and building impactful software across{" "}
           <span className="hero-emphasis">frontend</span>,{" "}
           <span className="hero-emphasis">backend</span>, and{" "}
@@ -44,13 +37,9 @@ function Hero() {
           it's a post-discharge app for sepsis survivors or a Chrome extension that
           makes AI's environmental footprint visible. I'm comfortable moving across
           the stack and learning new tools quickly when a problem demands it.{" "}
-          <a
-            href="https://drive.google.com/file/d/1L0uaP0Mxw8Ap8_FTUJPqF1rAN-yK7SQm/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <ExternalLink href="https://drive.google.com/file/d/1L0uaP0Mxw8Ap8_FTUJPqF1rAN-yK7SQm/view?usp=sharing">
             View my resume
-          </a>
+          </ExternalLink>
           .
         </p>
       </div>
@@ -58,4 +47,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default HomeIntro;

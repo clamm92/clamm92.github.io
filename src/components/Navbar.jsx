@@ -26,7 +26,7 @@ function resolveHeaderState() {
   return "visible";
 }
 
-function AppNavbar() {
+function Navbar() {
   const location = useLocation();
   const isHome = location.pathname === "/";
   const [scrolled, setScrolled] = useState(
@@ -65,9 +65,10 @@ function AppNavbar() {
           className="site-nav-toggle"
           aria-label="Toggle navigation"
           aria-expanded={menuOpen}
+          aria-controls="site-nav"
           onClick={() => setMenuOpen((open) => !open)}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             {menuOpen ? (
               <path d="M18 6L6 18M6 6l12 12" />
             ) : (
@@ -76,12 +77,13 @@ function AppNavbar() {
           </svg>
         </button>
 
-        <nav className={`site-nav-collapse ${menuOpen ? "open" : ""}`}>
+        <nav id="site-nav" className={`site-nav-collapse ${menuOpen ? "open" : ""}`} aria-label="Primary">
           {navLinks.map(({ to, label }) => (
             <Link
               key={to}
               to={to}
               className={`site-nav-link ${location.pathname === to ? "active" : ""}`}
+              aria-current={location.pathname === to ? "page" : undefined}
               onClick={closeMenu}
             >
               {label}
@@ -93,4 +95,4 @@ function AppNavbar() {
   );
 }
 
-export default AppNavbar;
+export default Navbar;

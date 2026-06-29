@@ -34,14 +34,14 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="site-footer-social-link"
-              aria-label={label}
+              aria-label={`${label} (opens in new tab)`}
             >
               <i className={iconClass} />
             </a>
           ))}
         </div>
 
-        <p className="site-footer-meta">Last updated: May 2026</p>
+        <p className="site-footer-meta">Last updated: June 2026</p>
       </div>
     </footer>
   );

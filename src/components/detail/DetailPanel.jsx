@@ -31,7 +31,7 @@ function DetailPanel({
             ref={closeButtonRef}
             type="button"
             className="detail-panel-close"
-            aria-label="Close"
+            aria-label={closeLabel}
             onClick={initiateClose}
           >
             ×

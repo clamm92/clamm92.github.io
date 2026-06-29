@@ -6,7 +6,9 @@ function PosterCard({ project, style }) {
   const tags = project.technologies.slice(0, 3);
 
   const handleClick = () => {
-    navigate(`/projects?slug=${project.slug}`);
+    navigate(`/projects?slug=${project.slug}`, {
+      state: { scrollProjectsToTopOnClose: true },
+    });
   };
 
   const handleKeyDown = (e) => {

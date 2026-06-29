@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="app-shell">
         <Navbar />
-        <main className="flex-grow-1">
+        <main id="main-content" className="flex-grow-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route

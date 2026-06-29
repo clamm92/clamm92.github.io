@@ -26,7 +26,7 @@ function GalleryPhotoButton({ photo, index, variant, onOpen }) {
       >
         <img
           src={photo.src}
-          alt={photo.alt}
+          alt=""
           className={
             variant === "mosaic"
               ? "hobby-gallery-item-img"

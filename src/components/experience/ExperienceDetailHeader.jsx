@@ -1,4 +1,5 @@
 import { STATUS_CONFIG } from "../../data/experienceConfig";
+import ExternalLink from "../ExternalLink";
 
 function ExperienceDetailHeader({ entry }) {
   const status = STATUS_CONFIG[entry.status];
@@ -20,9 +21,7 @@ function ExperienceDetailHeader({ entry }) {
       </h2>
       <p className="detail-panel-subtitle">
         {entry.link ? (
-          <a href={entry.link} target="_blank" rel="noopener noreferrer">
-            {entry.organization}
-          </a>
+          <ExternalLink href={entry.link}>{entry.organization}</ExternalLink>
         ) : (
           entry.organization
         )}

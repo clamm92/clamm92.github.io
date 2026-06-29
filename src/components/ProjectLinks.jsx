@@ -1,3 +1,5 @@
+import VisuallyHidden from "./VisuallyHidden";
+
 function LinkIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
@@ -47,6 +49,7 @@ function ProjectLinks({ links, className = "project-links", stopPropagation = fa
           >
             {Icon && <Icon />}
             <span>{link.label}</span>
+            <VisuallyHidden> (opens in new tab)</VisuallyHidden>
           </a>
         );
       })}

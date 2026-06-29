@@ -8,7 +8,7 @@ export const hobbiesSections = [
 
 export const hobbiesGallery = [
   {
-    src: "/wahclella.png",
+    src: "/wahclella.jpg",
     alt: "Wahclella Falls in the Columbia River Gorge",
     caption: "Wahclella Falls along the Columbia River Gorge.",
     layout: "tall",
@@ -28,37 +28,37 @@ export const hobbiesGallery = [
     cluster: "chess",
   },
   {
-    src: "/white-shirt-self.png",
+    src: "/white-shirt-self.jpg",
     alt: "Connor smiling for a badge photo",
     caption: "Smiling for a badge photo!",
     layout: "default",
   },
   {
-    src: "/blazers-suns-2025.png",
+    src: "/blazers-suns-2025.jpg",
     alt: "Portland Trail Blazers game at Moda Center",
     caption: "Blazers vs. Suns at the Moda Center, 2025.",
     layout: "wide",
   },
   {
-    src: "/cascade-head-summit.png",
+    src: "/cascade-head-summit.jpg",
     alt: "Cascade Head summit on the Oregon coast",
     caption: "Cascade Head summit, Oregon coast.",
     layout: "default",
   },
   {
-    src: "/seattle-portrait.png",
+    src: "/seattle-portrait.jpg",
     alt: "View of downtown Seattle from a pier",
     caption: "View of downtown Seattle from a pier.",
     layout: "tall",
   },
   {
-    src: "/uw-football.png",
+    src: "/uw-football.jpg",
     alt: "Connor and Giles Jackson at UW Husky Stadium",
     caption: "Myself and Giles Jackson at UW Husky Stadium after a win.",
     layout: "wide",
   },
   {
-    src: "/sarah-conno.png",
+    src: "/sarah-conno.jpg",
     alt: "Connor and Sarah at Volunteer Park in Seattle",
     caption: "My girlfriend Sarah and I at Volunteer Park in Seattle.",
     layout: "default",

@@ -16,7 +16,7 @@ function ProjectDetailPanel({ project, onClose }) {
             {project.shortTitle}
           </h2>
           {tags.length > 0 && (
-            <div className="detail-panel-tags">
+            <div className="detail-panel-tags" aria-label="Project technologies">
               {tags.map((tag) => (
                 <span key={tag} className="detail-panel-tag">
                   {tag}
