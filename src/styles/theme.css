@@ -21,6 +21,10 @@
   --max-width: 1024px;
   --header-height: 64px;
   --page-padding-x: 1rem;
+  --layout-inset-x: max(
+    var(--page-padding-x),
+    calc((100vw - var(--max-width)) / 2 + var(--page-padding-x))
+  );
 
   --radius-md: 12px;
   --radius-sm: 6px;

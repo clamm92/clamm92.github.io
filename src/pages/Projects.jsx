@@ -16,7 +16,7 @@ function Projects() {
   return (
     <>
       <PageHeader title="Projects">
-        Everything I've built — full-stack apps, browser extensions, data
+        Everything I've built : full-stack apps, browser extensions, data
         visualizations, and hackathon projects. Select a project to read more.
       </PageHeader>
 

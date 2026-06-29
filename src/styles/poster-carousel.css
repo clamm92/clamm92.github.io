@@ -48,8 +48,9 @@
   gap: 1.25rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-padding-left: var(--page-padding-x);
+  scroll-padding-left: var(--layout-inset-x);
   padding: 0.5rem var(--page-padding-x) 1rem;
+  padding-left: var(--layout-inset-x);
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) transparent;

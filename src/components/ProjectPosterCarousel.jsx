@@ -19,7 +19,7 @@ function ProjectPosterCarousel() {
           Selected work
         </h2>
         <p className="poster-carousel-intro">
-          A few projects where I shipped real software — from a clinical capstone
+          A few projects where I shipped real software, from a clinical capstone
           to client work and hackathon builds.
         </p>
       </header>
