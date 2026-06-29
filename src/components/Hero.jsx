@@ -4,10 +4,20 @@ function Hero() {
   return (
     <section className="hero hero-animate" data-hero>
       <div className="hero-inner layout-shell">
+        <div className="hero-profile">
+          <img
+            src="/profile.png"
+            alt="Connor Lam"
+            className="hero-profile-img"
+            width={104}
+            height={104}
+          />
+        </div>
+
         <h1 className="hero-headline">
           Hey, I am Connor Lam.
           <br className="d-none d-sm-block" />
-          {" "}A third-year{" "}
+          {" "}An incoming fourth-year{" "}
           <a
             href="https://ischool.uw.edu/programs/informatics"
             target="_blank"

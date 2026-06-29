@@ -93,7 +93,7 @@ export const experienceData = [
     title: "Application Developer Intern",
     organization: "IBM",
     link: "https://www.ibm.com/",
-    location: "TBD",
+    location: "Baton Rouge, LA",
     dates: "Oct 2026 – Dec 2026",
     tagline: "Incoming application developer internship.",
     accentColor: "#0f62fe",

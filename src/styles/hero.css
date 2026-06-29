@@ -24,6 +24,21 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 0 1rem;
+  align-items: start;
+}
+
+.hero-profile {
+  grid-column: 1 / -1;
+  margin-bottom: 1.25rem;
+}
+
+.hero-profile-img {
+  width: 5.25rem;
+  height: 5.25rem;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-card);
 }
 
 .hero-headline {
@@ -38,6 +53,18 @@
 }
 
 @media (min-width: 768px) {
+  .hero-profile {
+    grid-column: 11 / 13;
+    grid-row: 1;
+    justify-self: end;
+    margin-bottom: 0;
+  }
+
+  .hero-profile-img {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
   .hero-headline {
     grid-column: 1 / 11;
     max-width: 44rem;
