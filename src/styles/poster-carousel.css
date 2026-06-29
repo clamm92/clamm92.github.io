@@ -196,14 +196,42 @@
     max-height: 4.5rem;
     opacity: 0.85;
     margin-top: 0.25rem;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+  }
+
+  .poster-card-tagline::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .poster-card-tagline::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
   }
 }
 
 @media (max-width: 767px) {
   .poster-card-tagline {
-    max-height: 3rem;
+    max-height: 3.25rem;
     opacity: 0.85;
     margin-top: 0.25rem;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+  }
+
+  .poster-card-tagline::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .poster-card-tagline::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
   }
 
   .poster-carousel-item {
@@ -232,7 +260,8 @@
   }
 
   .poster-card-tagline {
-    max-height: none;
+    max-height: 4.5rem;
     opacity: 0.85;
+    overflow-y: auto;
   }
 }

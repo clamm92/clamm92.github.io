@@ -19,17 +19,17 @@ function ProjectDetailContent({ project }) {
   return (
     <>
       {(hasLinks || hasImages) && (
-        <div className="project-panel-media">
+        <div className="detail-panel-media">
           {hasLinks && (
-            <div className="project-panel-actions">
+            <div className="detail-panel-actions">
               <ProjectLinks links={project.links} />
             </div>
           )}
 
           {hasImages && (
-            <section className="project-panel-section">
-              <h3 className="project-panel-section-title">Screenshots</h3>
-              <div className="project-panel-gallery">
+            <section className="detail-panel-block" style={{ "--block-index": 0 }}>
+              <h3 className="detail-panel-section-title">Screenshots</h3>
+              <div className="detail-panel-gallery">
                 {project.images.map((image) => {
                   const imgSrc = typeof image === "object" ? image.src : image;
                   const isExternal = typeof image === "object" && image.externalLink;
@@ -37,12 +37,12 @@ function ProjectDetailContent({ project }) {
                     <button
                       key={imgSrc}
                       type="button"
-                      className="project-panel-gallery-thumb"
+                      className="detail-panel-gallery-thumb"
                       onClick={() => handleImageClick(image)}
                     >
                       <img src={imgSrc} alt={`${project.shortTitle} screenshot`} />
                       {isExternal && (
-                        <span className="project-panel-gallery-badge">PDF</span>
+                        <span className="detail-panel-gallery-badge">PDF</span>
                       )}
                     </button>
                   );
@@ -53,28 +53,30 @@ function ProjectDetailContent({ project }) {
         </div>
       )}
 
-      <div className="project-panel-sections">
-        <section className="project-panel-section">
-          <h3 className="project-panel-section-title">Context</h3>
-          <p className="project-panel-section-text">{project.problem}</p>
+      <div className="detail-panel-blocks">
+        <section className="detail-panel-block" style={{ "--block-index": 1 }}>
+          <h3 className="detail-panel-section-title">Context</h3>
+          <p className="detail-panel-section-text">{project.problem}</p>
         </section>
 
-        <section className="project-panel-section">
-          <h3 className="project-panel-section-title">What I built</h3>
-          <p className="project-panel-section-text">{project.solution}</p>
+        <section className="detail-panel-block" style={{ "--block-index": 2 }}>
+          <h3 className="detail-panel-section-title">Approach</h3>
+          <p className="detail-panel-section-text">{project.solution}</p>
         </section>
 
-        <section className="project-panel-section">
-          <h3 className="project-panel-section-title">Result</h3>
-          <p className="project-panel-section-text">{project.impact}</p>
+        <section className="detail-panel-block" style={{ "--block-index": 3 }}>
+          <h3 className="detail-panel-section-title">Result</h3>
+          <p className="detail-panel-section-text">{project.impact}</p>
         </section>
 
         {project.technologies?.length > 0 && (
-          <section className="project-panel-section">
-            <h3 className="project-panel-section-title">Tech stack</h3>
-            <div className="project-panel-tech">
+          <section className="detail-panel-block" style={{ "--block-index": 4 }}>
+            <h3 className="detail-panel-section-title">Tech stack</h3>
+            <div className="detail-panel-tech">
               {project.technologies.map((tech) => (
-                <span key={tech} className="project-panel-tech-tag">{tech}</span>
+                <span key={tech} className="detail-panel-tech-tag">
+                  {tech}
+                </span>
               ))}
             </div>
           </section>

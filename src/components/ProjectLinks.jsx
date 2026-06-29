@@ -29,7 +29,7 @@ const ICONS = {
   video: VideoIcon,
 };
 
-function ProjectLinks({ links, className = "quick-links-row", stopPropagation = false }) {
+function ProjectLinks({ links, className = "project-links", stopPropagation = false }) {
   if (!links?.length) return null;
 
   return (
@@ -42,7 +42,7 @@ function ProjectLinks({ links, className = "quick-links-row", stopPropagation = 
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="quick-link-btn"
+            className="project-link-btn"
             onClick={stopPropagation ? (e) => e.stopPropagation() : undefined}
           >
             {Icon && <Icon />}
