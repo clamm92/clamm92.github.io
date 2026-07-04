@@ -5,14 +5,16 @@ import Projects from './pages/Projects';
 import Hobbies from './pages/Hobbies';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-shell">
         <Navbar />
-        <main id="main-content" className="flex-grow-1">
+        <main id="main-content" className="app-shell-main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route

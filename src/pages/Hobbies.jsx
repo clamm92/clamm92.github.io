@@ -70,7 +70,7 @@ const sectionContent = {
       remains a strong interest of mine. I enjoy attending University of Washington
       School of Music events, particularly the seasonal{" "}
       <ExternalLink href="https://music.washington.edu/ensembles/campus-philharmonia-orchestras">
-        UW Campus Philharmoic Orchestra
+        UW Campus Philharmonic Orchestra
       </ExternalLink>{" "}
       concerts. The ambience and live performances provide a calm and meaningful
       counterbalance to my technical work.

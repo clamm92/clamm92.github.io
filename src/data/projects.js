@@ -297,7 +297,7 @@ export const projectsData = [
     "year": "2024",
     "accentColor": "#2563eb",
     "accentColorDark": "#1d4ed8",
-    "sortOrder": 3,
+    "sortOrder": 1,
     "slug": "geo-economic-mapping",
     "shortTitle": "Geo-Economic Mapping",
     "title": "Geo-Economic Mapping of Educational Access",
@@ -355,12 +355,6 @@ export function getProjectBySlug(slug) {
 
 export function getSortedProjects() {
   return [...projectsData].sort((a, b) => b.sortOrder - a.sortOrder);
-}
-
-export function getProjectCoverImage(project) {
-  if (!project.images?.length) return null;
-  const image = project.images[0];
-  return typeof image === 'object' ? image.src : image;
 }
 
 export function getFeaturedProjects() {

@@ -19,14 +19,12 @@
 .hobby-section {
   padding: 2rem 0;
   border-top: 1px solid var(--color-border);
-  opacity: 0;
   transform: translateY(18px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transition: transform 0.55s ease;
   transition-delay: calc(var(--section-index, 0) * 0.05s);
 }
 
 .hobby-section.is-visible {
-  opacity: 1;
   transform: translateY(0);
 }
 
@@ -100,7 +98,6 @@
   width: min(240px, 72vw);
   scroll-snap-align: start;
   margin: 0;
-  opacity: 0;
   transform: translateY(14px) scale(0.97);
 }
 
@@ -181,7 +178,6 @@
 
   .hobby-gallery-item {
     margin: 0;
-    opacity: 0;
     transform: translateY(16px) scale(0.96);
   }
 
@@ -208,7 +204,6 @@
     flex-direction: column;
     gap: 0.35rem;
     grid-row: span 2;
-    opacity: 0;
     transform: translateY(16px) scale(0.96);
   }
 
@@ -363,7 +358,6 @@
 
 @keyframes hobbyPhotoIn {
   to {
-    opacity: 1;
     transform: translateY(0) scale(1);
   }
 }

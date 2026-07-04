@@ -55,6 +55,10 @@
   min-height: 100vh;
 }
 
+.app-shell-main {
+  flex: 1;
+}
+
 *,
 *::before,
 *::after {
