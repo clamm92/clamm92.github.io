@@ -57,7 +57,7 @@ function Footer() {
           ))}
         </div>
 
-        <p className="site-footer-meta">Last updated: June 2026</p>
+        <p className="site-footer-meta">Last updated: July 2026</p>
       </div>
     </footer>
   );
