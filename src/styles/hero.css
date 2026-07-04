@@ -52,6 +52,16 @@
   max-width: 100%;
 }
 
+.hero-headline-break {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .hero-headline-break {
+    display: inline;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-profile {
     grid-column: 11 / 13;
