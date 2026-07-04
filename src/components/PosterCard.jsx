@@ -41,15 +41,7 @@ function PosterCard({ project, style }) {
         </span>
       </div>
 
-      <div className="poster-card-center">
-        {project.posterImage ? (
-          <img
-            src={project.posterImage}
-            alt=""
-            className="poster-card-thumb"
-          />
-        ) : null}
-      </div>
+      <div className="poster-card-center" aria-hidden="true" />
 
       <div className="poster-card-text">
         <div className="poster-card-summary">
