@@ -40,7 +40,7 @@ function DetailGalleryThumbs({
               enlargeActionLabel
             )}
           >
-            <img src={imgSrc} alt="" />
+            <img src={imgSrc} alt="" loading="lazy" decoding="async" />
             {isExternal && (
               <span className="detail-panel-gallery-badge" aria-hidden="true">
                 PDF
