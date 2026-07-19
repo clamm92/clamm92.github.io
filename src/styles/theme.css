@@ -19,6 +19,7 @@
   --text-small: clamp(0.875rem, 0.1vw + 0.85rem, 0.9375rem);
 
   --max-width: 1024px;
+  --detail-panel-max-width: 100%;
   --header-height: 64px;
   --page-padding-x: 1rem;
   --layout-inset-x: max(
@@ -38,6 +39,19 @@
 @media (min-width: 768px) {
   :root {
     --page-padding-x: 2rem;
+    --detail-panel-max-width: 560px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --detail-panel-max-width: 640px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --detail-panel-max-width: min(720px, 45vw);
   }
 }
 
