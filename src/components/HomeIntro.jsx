@@ -26,10 +26,9 @@ function HomeIntro() {
           <ExternalLink href="https://www.washington.edu/">
             University of Washington
           </ExternalLink>
-          , seeking full-time software roles and building impactful software across{" "}
-          <span className="hero-emphasis">frontend</span>,{" "}
-          <span className="hero-emphasis">backend</span>, and{" "}
-          <span className="hero-emphasis">database systems</span>.
+          , seeking full-time software roles and building impactful software across
+          the stack, from <span className="hero-emphasis">web systems</span> to{" "}
+          <span className="hero-emphasis">AI-powered tools</span>.
         </h1>
 
         <p className="hero-subtitle hero-subtitle-animate">

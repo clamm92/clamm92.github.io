@@ -118,37 +118,59 @@ export const experienceData = [
     sortOrder: 35,
     dateStart: "2026-06",
 
-    title: "Full-Stack Software Developer Intern",
+    title: "Software Engineering Intern",
     organization: "Applied Materials",
     link: "https://www.appliedmaterials.com/",
     location: "Santa Clara, CA",
     dates: "Jun 2026 – Sep 2026",
-    tagline: "Building production software with Java and React in Santa Clara.",
+    tagline:
+      "Built a production manufacturing tool from a 35-page systems spec, end-to-end.",
     accentColor: "#00629b",
 
     preview: {
-      tags: ["Java", "React", "Full-stack"],
+      tags: ["Java", "React", "Spring Boot"],
     },
 
     contentBlocks: [
       {
         type: "overview",
         text:
-          "Interning on a full-stack engineering team at Applied Materials in Santa Clara, contributing to internal software with Java backends and React frontends.",
+          "Spent the summer as a Software Engineering Intern in the semiconductor industry, building a full-stack manufacturing tool from a 35-page systems requirements spec. Owned the project end-to-end, translating ambiguous hardware requirements into a phased software roadmap, shipping a production tool used daily by lab engineers, and presenting the finished product to Applied Materials executive leadership.",
       },
       {
         type: "bullets",
-        title: "Focus areas",
+        title: "What I did",
         items: [
-          "Full-stack feature development with Java and React",
-          "Working within an enterprise codebase and team engineering practices",
-          "Translating product requirements into shippable software",
+          "Translated a 35-page systems requirements spec (145 requirements, 22 features) into a phased software architecture and delivery roadmap (P0 through P3), resolving conflicting requirement definitions through conversations with systems engineers and on-site lab visits",
+          "Built a full-stack tool end-to-end using React, TypeScript, Java, Spring Boot, and PostgreSQL, shipping complete vertical slices from UI to API to database and backing the app with a 2,000+ test suite through test-driven development",
+          "Containerized the application with Docker and deployed it on Kubernetes, enabling automated recovery and reliable daily use by 30+ lab engineers",
+          "Built a retrieval-augmented generation pipeline and an MCP server exposing CRUD tools over the app's REST API, powering an in-app chatbot that resolves natural language queries in seconds",
         ],
       },
       {
+        type: "text",
+        title: "Leadership & problem solving",
+        text:
+          "Worked across a wide range of stakeholders, meeting weekly with systems engineers and my manager to weigh feature scope and priority tradeoffs, and iterating biweekly with engineering teams in Taiwan and India to align on architecture and algorithm decisions. Reviewed other interns' designs and projects to find ways our work could connect, which led directly to building an MCP server so my application's data could be read and edited by multiple external clients, not just my own frontend.",
+      },
+      {
+        type: "text",
+        title: "Impact & takeaways",
+        text:
+          "Presented the finished tool to 200+ attendees, including the company's CEO, at the internship's capstone showcase. The tool moved beyond the demo into real daily use: 30+ lab engineers now rely on it directly, and the in-app chatbot resolves natural language queries in seconds, noticeably quicker than digging through the tool manually. The internship pushed me past pure coding into product thinking: understanding who a tool is actually for, and building something people choose to rely on.",
+      },
+      {
         type: "skills",
-        title: "Technologies",
-        items: ["Java", "React", "Full-stack development"],
+        title: "Skills",
+        items: [
+          "Java",
+          "React",
+          "Spring Boot",
+          "PostgreSQL",
+          "RAG",
+          "MCP",
+          "Docker/Kubernetes",
+        ],
       },
     ],
   },
