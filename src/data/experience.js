@@ -133,6 +133,15 @@ export const experienceData = [
 
     contentBlocks: [
       {
+        type: "gallery",
+        title: "Photos",
+        images: [
+          "/applied-materials-ceo.jpeg",
+          "/applied-materials-presentation.jpg",
+          "/applied-materials-interns.png",
+        ],
+      },
+      {
         type: "overview",
         text:
           "Spent the summer as a Software Engineering Intern in the semiconductor industry, building a full-stack manufacturing tool from a 35-page systems requirements spec. Owned the project end-to-end, translating ambiguous hardware requirements into a phased software roadmap, shipping a production tool used daily by lab engineers, and presenting the finished product to Applied Materials executive leadership.",
