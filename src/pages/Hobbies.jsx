@@ -21,7 +21,7 @@ const sectionContent = {
     <p>
       Chess is the primary game I play and a favorite way to unwind. I enjoy the
       strategy and competitive nature of the game, and I'm currently rated
-      approximately 1900 in rapid and 1800 in blitz and bullet, placing me in the
+      approximately 1800 in blitz and 1900 in rapid and bullet, placing me in the
       top few percent on{" "}
       <ExternalLink href="https://www.chess.com/">Chess.com</ExternalLink>. Chess
       helps me reset mentally while still engaging analytical and strategic
