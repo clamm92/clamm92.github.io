@@ -1,4 +1,4 @@
-export const FEATURED_SLUGS = ['sepsis-readmission', 'nail-salon', 'awareai'];
+export const FEATURED_SLUGS = ['sepsis-readmission', 'awareai', 'client-profile'];
 
 export const projectsData = [
   {
