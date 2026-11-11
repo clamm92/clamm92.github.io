@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useBodyScrollLock } from "./useBodyScrollLock";
+import { useEscapeKey } from "./useEscapeKey";
 
 export const DETAIL_PANEL_CLOSE_MS = 300;
 
@@ -28,24 +30,12 @@ export function useDetailPanel(onClose) {
     return () => window.clearTimeout(timer);
   }, [isClosing, onClose]);
 
+  useBodyScrollLock(true);
+  useEscapeKey(initiateClose);
+
   useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
     closeButtonRef.current?.focus();
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-    };
   }, []);
-
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") initiateClose();
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [initiateClose]);
 
   return {
     closeButtonRef,

@@ -22,11 +22,11 @@ function ProjectDetailContent({ project }) {
 
           {hasImages && (
             <section className="detail-panel-block" style={{ "--block-index": 0 }}>
-              <h3 className="detail-panel-section-title">Screenshots</h3>
+              <h3 className="detail-panel-section-title">Images</h3>
               <DetailGalleryThumbs
                 images={project.images}
                 labelContext={project.shortTitle}
-                enlargeActionLabel="Enlarge screenshot"
+                enlargeActionLabel="Enlarge image"
                 onImageSelect={setModalImage}
               />
             </section>

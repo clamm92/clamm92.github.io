@@ -1,5 +1,7 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { groupGalleryPhotos } from "../../data/hobbies";
+import { useBodyScrollLock } from "../../hooks/useBodyScrollLock";
+import { useEscapeKey } from "../../hooks/useEscapeKey";
 import { useInView } from "../../hooks/useInView";
 
 function GalleryPhotoButton({ photo, index, variant, onOpen }) {
@@ -86,22 +88,9 @@ function HobbyGallery({ photos }) {
   const openPhoto = useCallback((photo) => setExpandedPhoto(photo), []);
   const closePhoto = useCallback(() => setExpandedPhoto(null), []);
 
-  useEffect(() => {
-    if (!expandedPhoto) return;
-
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") closePhoto();
-    };
-
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [expandedPhoto, closePhoto]);
+  const isLightboxOpen = Boolean(expandedPhoto);
+  useBodyScrollLock(isLightboxOpen);
+  useEscapeKey(closePhoto, isLightboxOpen);
 
   return (
     <>

@@ -1,27 +1,27 @@
 import { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
+import { useBodyScrollLock } from "../hooks/useBodyScrollLock";
+import { useEscapeKey } from "../hooks/useEscapeKey";
 
 function ImageLightbox({ src, alt, onClose }) {
   const closeRef = useRef(null);
   const label = alt || "Enlarged image";
 
+  useBodyScrollLock(true);
+  useEscapeKey(onClose);
+
   useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const previousFocus = document.activeElement;
     closeRef.current?.focus();
 
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") onClose();
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
     return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", handleKeyDown);
+      if (previousFocus instanceof HTMLElement && previousFocus.isConnected) {
+        previousFocus.focus({ preventScroll: true });
+      }
     };
-  }, [onClose]);
+  }, []);
 
-  return (
+  return createPortal(
     <div className="image-modal-overlay" onClick={onClose} role="presentation">
       <div
         className="image-modal-content"
@@ -41,7 +41,8 @@ function ImageLightbox({ src, alt, onClose }) {
         </button>
         <img src={src} alt={label} className="image-modal-img" />
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 

@@ -3,6 +3,55 @@ export const FEATURED_SLUGS = ['sepsis-readmission', 'nail-salon', 'awareai'];
 export const projectsData = [
   {
     "year": "2026",
+    "accentColor": "#0f62fe",
+    "accentColorDark": "#0043ce",
+    "sortOrder": 13,
+    "slug": "client-profile",
+    "shortTitle": "IBM Client Profile Agent",
+    "title": "IBM Client Profile Agent (IBM Hackathon 2026: Best Impact)",
+    "tagline": "An enterprise AI agent extension and local MCP server that generates source-linked, one-page PDF client briefs in under two minutes.",
+    "problem": "Consultants joining a new engagement often start with little context on the client, spending hours running scattered searches across filings and news without knowing which details actually matter.",
+    "solution": "Guided by 19 interviews with IBM, Oracle, and SAP consultants and managers, we built a custom Client Profile mode inside IBM's internal AI workspace (Bob) backed by an 11-tool local MCP server over stdio. The server pulls public SEC filings (10-K, 8-K, XBRL financials), news, and official company pages while isolating internal IBM systems. A two-pass PDF layout engine enforces a strict one-page limit and only allows citations from URLs actually returned during that session.",
+    "impact": "Cut client onboarding research from 2+ hours of scattered manual lookups to under 2 minutes, producing verifiable briefs across public, private, and public-sector organizations. Won Best Impact at the 2026 IBM Bob-a-thon and passed 24 automated test suites across 8 live organization profiles.",
+    "technologies": [
+      "Node.js",
+      "MCP",
+      "JavaScript",
+      "REST APIs",
+      "JSON-RPC",
+      "Web Scraping",
+      "Git"
+    ],
+    "images": [
+      "/client-profile-slide.png",
+      {
+        "src": "/client-profile-salesforce.png",
+        "externalLink": "https://drive.google.com/file/d/19RAFDp1MfXfj0WQeTy0MIYHzTu-FdqFE/view?usp=sharing"
+      },
+      {
+        "src": "/client-profile-nvidia.png",
+        "externalLink": "https://drive.google.com/file/d/1jRaJBObtr22Mz2w1Y2MS2hNOZR_v8m4i/view?usp=sharing"
+      },
+      {
+        "src": "/client-profile-jpmorgan.png",
+        "externalLink": "https://drive.google.com/file/d/1frflXSw9SxvVrdX1Jgp4G0nf5UbWT7io/view?usp=sharing"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/clamm92/client-profile",
+        "icon": "github"
+      },
+      {
+        "label": "Video Demo",
+        "url": "https://drive.google.com/file/d/1DN-vEXwNRNdZ3Gecu_agJrAw_o0ofgBm/view?usp=sharing",
+        "icon": "video"
+      }
+    ]
+  },
+  {
+    "year": "2026",
     "accentColor": "#1e40af",
     "accentColorDark": "#1e3a8a",
     "sortOrder": 12,
