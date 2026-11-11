@@ -10,9 +10,9 @@ export const projectsData = [
     "shortTitle": "IBM Client Profile Agent",
     "title": "IBM Client Profile Agent (IBM Hackathon 2026: Best Impact)",
     "tagline": "An enterprise AI agent extension and local MCP server that generates source-linked, one-page PDF client briefs in under two minutes.",
-    "problem": "IBM Consultants joining a new engagement often start with little context on the client, spending hours running scattered searches across filings and news without knowing which details actually matter.",
+    "problem": "IBM consultants joining a new engagement often start with little context on the client, spending hours running scattered searches across filings and news without knowing which details actually matter.",
     "solution": "Guided by 19 interviews with IBM, Oracle, and SAP consultants and managers, we built a custom Client Profile mode inside IBM's internal AI workspace (Bob) backed by an 11-tool local MCP server over stdio. The server pulls public SEC filings (10-K, 8-K, XBRL financials), news, and official company pages while isolating internal IBM systems. A two-pass PDF layout engine enforces a strict one-page limit and only allows citations from URLs actually returned during that session.",
-    "impact": "Cut client onboarding research from 2+ hours of scattered manual lookups to under 2 minutes, producing verifiable briefs across public, private, and public-sector organizations. Won Best Impact at the 2026 IBM Bob-a-thon and passed 24 automated test suites across 8 live organization profiles.",
+    "impact": "Cut client onboarding research from 2+ hours of scattered manual lookups to under 2 minutes, producing verifiable briefs across public and private sector organizations. Won Best Impact at the 2026 IBM Bob-a-thon and passed 24 automated test suites across 8 live organization profiles.",
     "technologies": [
       "Node.js",
       "MCP",
@@ -133,7 +133,7 @@ export const projectsData = [
     "tagline": "A privacy-first Chrome extension that estimates and visualizes the real-time water consumption of AI interactions across major platforms.",
     "problem": "AI adoption is accelerating, yet most users remain unaware of its environmental footprint. Each prompt to systems like ChatGPT, Claude, or Gemini is processed in large-scale data centers that rely on water-intensive cooling, an invisible cost that compounds as AI usage grows globally.",
     "solution": "Developed a Chrome extension that estimates water usage in real time using 2026 energy benchmarks from Google's Environmental Report and peer-reviewed academic research. A floating widget visualizes both personal and collective impact using a 6-tier scale (droplets to oceans). Calculations run client-side with sub-10ms latency, requiring no accounts or personally identifiable information. All user data is kept local, with only anonymous global totals aggregated via Firebase's REST API.",
-    "impact": "During live demos, the extension processed 1,000+ prompts across 6 major AI platforms with no performance degradation, demonstrating reliable real-time estimation at scale. The project won Best Implementation at WINFO 2026, where it stood out for combining environmental awareness with a fully privacy-first architecture.",
+    "impact": "During live demos, the extension processed 1,000+ prompts across 6 major AI platforms with no performance degradation, demonstrating reliable real-time estimation at scale. The project won Best Implementation at WINFO 2026 for combining environmental awareness with a fully privacy-first architecture.",
     "technologies": [
       "JavaScript",
       "Chrome Extensions API",
