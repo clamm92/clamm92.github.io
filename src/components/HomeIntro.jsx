@@ -18,7 +18,7 @@ function HomeIntro() {
         <h1 className="hero-headline">
           Hey, I am Connor Lam.
           <br className="hero-headline-break" />
-          {" "}An incoming fourth-year{" "}
+          {" "}A fourth-year{" "}
           <ExternalLink href="https://ischool.uw.edu/programs/informatics">
             Informatics
           </ExternalLink>{" "}
